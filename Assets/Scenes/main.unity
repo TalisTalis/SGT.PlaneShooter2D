@@ -298,31 +298,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1196025068}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.0207, y: 0.0207, z: 0}
-  m_LocalScale: {x: 9.194401, y: 15.042, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 9, y: 15, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1505500291 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4740677946257523362, guid: 02e78c542f8978147bbfdbdb37d37f18, type: 3}
-  m_PrefabInstance: {fileID: 4740677947185782305}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1505500296
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1505500291}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9da19bbb8ee56c74f9366b7ec05970d9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerBullet: {fileID: 2641576455589529195, guid: a353ca8548875c545ba83ac05c0f6a71, type: 3}
 --- !u!1001 &4740677947185782305
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -330,13 +312,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1505500296, guid: 02e78c542f8978147bbfdbdb37d37f18, type: 3}
+      propertyPath: bulletSpawnTime
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4740677946257523362, guid: 02e78c542f8978147bbfdbdb37d37f18, type: 3}
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    - target: {fileID: 4740677946257523366, guid: 02e78c542f8978147bbfdbdb37d37f18, type: 3}
-      propertyPath: speed
-      value: 10
+    - target: {fileID: 4740677946257523364, guid: 02e78c542f8978147bbfdbdb37d37f18, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4740677946257523367, guid: 02e78c542f8978147bbfdbdb37d37f18, type: 3}
       propertyPath: m_RootOrder
