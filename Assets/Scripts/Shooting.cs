@@ -4,12 +4,15 @@ using UnityEngine;
 public class Shooting : MonoBehaviour
 {
     public GameObject playerBullet;
+    public GameObject flash;
     public Transform spawnPoint1;
     public Transform spawnPoint2;
+
     public float bulletSpawnTime = 1f;
 
     private void Start()
     {
+        flash.SetActive(false);
         StartCoroutine(Shoot());
     }
     private void Update()
@@ -32,6 +35,9 @@ public class Shooting : MonoBehaviour
         {
             yield return new WaitForSeconds(bulletSpawnTime);
             Fire();
+            flash.SetActive(true);
+            yield return new WaitForSeconds(0.04f);
+            flash.SetActive(false);
         }
     }
 }
