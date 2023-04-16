@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class Shooting : MonoBehaviour
 {
-    public GameObject playerBullet;
+    public GameObject bullet;
     public GameObject flash;
     public Transform spawnPoint1;
     public Transform spawnPoint2;
@@ -25,8 +25,12 @@ public class Shooting : MonoBehaviour
 
     void Fire()
     {
-        Instantiate(playerBullet, spawnPoint1.position, Quaternion.identity);
-        Instantiate(playerBullet, spawnPoint2.position, Quaternion.identity);
+        Instantiate(bullet, spawnPoint1.position, Quaternion.identity);
+        if (spawnPoint2 == null)
+        {
+            return;
+        }
+        Instantiate(bullet, spawnPoint2.position, Quaternion.identity);
     }
 
     IEnumerator Shoot()
