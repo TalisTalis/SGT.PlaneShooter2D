@@ -7,6 +7,7 @@ public class PlayerScript : MonoBehaviour
     public float health = 20f;
 
     public GameObject explosionPrefab;
+    public GameObject damageEffectPrefab;
     public PlayerHealthbarScript playerHealthbar;
 
     float minX;
@@ -48,6 +49,9 @@ public class PlayerScript : MonoBehaviour
         {
             Destroy(collision.gameObject);
             DamagePlayerHealthbar();
+
+            GameObject damageEffect = Instantiate(damageEffectPrefab, collision.transform.position, Quaternion.identity);
+            Destroy(damageEffect.gameObject, 0.2f);
 
             if (health <= 0)
             {

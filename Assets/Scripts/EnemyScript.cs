@@ -6,6 +6,7 @@ public class EnemyScript : MonoBehaviour
     public float health = 10f;
 
     public GameObject explosionPrefab;
+    public GameObject damageEffectPrefab;
     public Healthbar healthbar;
 
     float barSize = 1f;
@@ -31,6 +32,8 @@ public class EnemyScript : MonoBehaviour
         {
             DamageHealthbar();
             Destroy(other.gameObject);
+            GameObject damageEffect = Instantiate(damageEffectPrefab, other.transform.position, Quaternion.identity);
+            Destroy(damageEffect.gameObject, 0.2f);
 
             if (health <= 0)
             {
