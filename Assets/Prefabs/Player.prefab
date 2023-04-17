@@ -272,7 +272,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 8
+  offset: 0.8
+  health: 20
   explosionPrefab: {fileID: 1730338621821775202, guid: 5f4e9644323075a4aa1bfb891583bbea, type: 3}
+  playerHealthbar: {fileID: 0}
 --- !u!114 &1505500296
 MonoBehaviour:
   m_ObjectHideFlags: 0
