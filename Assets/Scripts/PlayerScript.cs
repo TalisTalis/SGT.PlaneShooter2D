@@ -4,6 +4,8 @@ public class PlayerScript : MonoBehaviour
 {
     public float speed = 5f;
 
+    public GameObject explosionPrefab;
+
     float minX;
     float maxX;
     float minY;
@@ -34,5 +36,16 @@ public class PlayerScript : MonoBehaviour
         float newYpos = Mathf.Clamp(transform.position.y + deltaY, minY, maxY);
         //float newYpos = transform.position.y + deltaY;
         transform.position = new Vector2(newXpos, newYpos);
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("EnemyBullet"))
+        {
+            Destroy(collision.gameObject);
+            GameObject explosion = Instantiate(explosionPrefab, transform.position, Quaternion.identity);
+            Destroy(explosion, 2f);
+            Destroy(gameObject);
+        }
     }
 }
