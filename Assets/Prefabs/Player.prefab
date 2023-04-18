@@ -291,8 +291,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bullet: {fileID: 2641576455589529195, guid: a353ca8548875c545ba83ac05c0f6a71, type: 3}
   flash: {fileID: 8305308443710157669}
-  spawnPoint1: {fileID: 585606663}
-  spawnPoint2: {fileID: 58545316}
+  spawnPoint:
+  - {fileID: 585606663}
+  - {fileID: 58545316}
   bulletSpawnTime: 0.5
 --- !u!68 &7867276441301918988
 EdgeCollider2D:

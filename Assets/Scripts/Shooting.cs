@@ -5,8 +5,7 @@ public class Shooting : MonoBehaviour
 {
     public GameObject bullet;
     public GameObject flash;
-    public Transform spawnPoint1;
-    public Transform spawnPoint2;
+    public Transform[] spawnPoint;
 
     public float bulletSpawnTime = 1f;
 
@@ -25,12 +24,10 @@ public class Shooting : MonoBehaviour
 
     void Fire()
     {
-        Instantiate(bullet, spawnPoint1.position, Quaternion.identity);
-        if (spawnPoint2 == null)
+        foreach (var item in spawnPoint)
         {
-            return;
+            Instantiate(bullet, item.position, Quaternion.identity);
         }
-        Instantiate(bullet, spawnPoint2.position, Quaternion.identity);
     }
 
     IEnumerator Shoot()

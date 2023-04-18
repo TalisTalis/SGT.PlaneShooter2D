@@ -120,10 +120,10 @@ TextureImporter:
       name: aircraft2_0
       rect:
         serializedVersion: 2
-        x: 7
-        y: 66
-        width: 305
-        height: 204
+        x: 0
+        y: 0
+        width: 320
+        height: 320
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -141,10 +141,10 @@ TextureImporter:
       name: aircraft2_1
       rect:
         serializedVersion: 2
-        x: 328
-        y: 66
-        width: 304
-        height: 204
+        x: 320
+        y: 0
+        width: 320
+        height: 320
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
