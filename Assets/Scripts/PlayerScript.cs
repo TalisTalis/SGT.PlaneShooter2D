@@ -9,6 +9,7 @@ public class PlayerScript : MonoBehaviour
     public GameObject explosionPrefab;
     public GameObject damageEffectPrefab;
     public PlayerHealthbarScript playerHealthbar;
+    public CoinCount cointCount;
 
     float minX;
     float maxX;
@@ -59,6 +60,12 @@ public class PlayerScript : MonoBehaviour
                 Destroy(explosion, 2f);
                 Destroy(gameObject);
             }
+        }
+
+        if (collision.CompareTag("Coin"))
+        {
+            cointCount.AddCount();
+            Destroy(collision.gameObject);
         }
     }
 

@@ -160,7 +160,7 @@ MonoBehaviour:
   flash: {fileID: 6499649295975546884}
   spawnPoint:
   - {fileID: 1665304629}
-  bulletSpawnTime: 1
+  bulletSpawnTime: 2
 --- !u!114 &2791090688649011981
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -177,6 +177,7 @@ MonoBehaviour:
   health: 10
   explosionPrefab: {fileID: 8155296036066587640, guid: 22fe008f9e82d264cbf54487c937ca2f, type: 3}
   damageEffectPrefab: {fileID: 8551814197698247224, guid: ca726888a9922df4c9919fff1fb53cd6, type: 3}
+  coinPrefab: {fileID: 4635201543864938296, guid: 47d5f60298931294788119b2f894b5e9, type: 3}
   healthbar: {fileID: 3585637265466326003}
 --- !u!50 &249613087
 Rigidbody2D:

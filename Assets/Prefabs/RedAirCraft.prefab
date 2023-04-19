@@ -379,6 +379,7 @@ MonoBehaviour:
   health: 10
   explosionPrefab: {fileID: 8155296036066587640, guid: 22fe008f9e82d264cbf54487c937ca2f, type: 3}
   damageEffectPrefab: {fileID: 8551814197698247224, guid: ca726888a9922df4c9919fff1fb53cd6, type: 3}
+  coinPrefab: {fileID: 4635201543864938296, guid: 47d5f60298931294788119b2f894b5e9, type: 3}
   healthbar: {fileID: 8166293512423918178}
 --- !u!50 &565956288
 Rigidbody2D:
