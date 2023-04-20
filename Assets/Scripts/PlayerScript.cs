@@ -10,6 +10,7 @@ public class PlayerScript : MonoBehaviour
     public GameObject damageEffectPrefab;
     public PlayerHealthbarScript playerHealthbar;
     public CoinCount cointCount;
+    public GameController controller;
 
     float minX;
     float maxX;
@@ -59,6 +60,7 @@ public class PlayerScript : MonoBehaviour
                 GameObject explosion = Instantiate(explosionPrefab, transform.position, Quaternion.identity);
                 Destroy(explosion, 2f);
                 Destroy(gameObject);
+                controller.Invoke("GameOver", 2f);
             }
         }
 
