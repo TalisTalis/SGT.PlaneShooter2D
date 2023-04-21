@@ -6,6 +6,7 @@ public class Shooting : MonoBehaviour
     public GameObject bullet;
     public GameObject flash;
     public Transform[] spawnPoint;
+    public AudioSource audioSource;
 
     public float bulletSpawnTime = 1f;
 
@@ -36,6 +37,10 @@ public class Shooting : MonoBehaviour
         {
             yield return new WaitForSeconds(bulletSpawnTime);
             Fire();
+            if (audioSource != null)
+            {
+                audioSource.Play();
+            }
             flash.SetActive(true);
             yield return new WaitForSeconds(0.04f);
             flash.SetActive(false);

@@ -11,6 +11,9 @@ public class PlayerScript : MonoBehaviour
     public PlayerHealthbarScript playerHealthbar;
     public CoinCount cointCount;
     public GameController controller;
+    public AudioSource audioSource;
+    public AudioClip damageSound;
+    public AudioClip explosionSound;
 
     float minX;
     float maxX;
@@ -49,6 +52,7 @@ public class PlayerScript : MonoBehaviour
     {
         if (collision.CompareTag("EnemyBullet"))
         {
+            audioSource.PlayOneShot(damageSound, 0.5f);
             Destroy(collision.gameObject);
             DamagePlayerHealthbar();
 
@@ -57,6 +61,7 @@ public class PlayerScript : MonoBehaviour
 
             if (health <= 0)
             {
+                AudioSource.PlayClipAtPoint(explosionSound, Camera.main.transform.position, 0.5f);
                 GameObject explosion = Instantiate(explosionPrefab, transform.position, Quaternion.identity);
                 Destroy(explosion, 2f);
                 Destroy(gameObject);
