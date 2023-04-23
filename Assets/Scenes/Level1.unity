@@ -4437,14 +4437,6 @@ PrefabInstance:
       value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 4740677946257523366, guid: 02e78c542f8978147bbfdbdb37d37f18, type: 3}
-      propertyPath: health
-      value: 15
-      objectReference: {fileID: 0}
-    - target: {fileID: 4740677946257523366, guid: 02e78c542f8978147bbfdbdb37d37f18, type: 3}
-      propertyPath: coinSound
-      value: 
-      objectReference: {fileID: 8300000, guid: a87f44074bac247439b37f2c25b9a49a, type: 3}
-    - target: {fileID: 4740677946257523366, guid: 02e78c542f8978147bbfdbdb37d37f18, type: 3}
       propertyPath: cointCount
       value: 
       objectReference: {fileID: 635613854}
@@ -4552,10 +4544,6 @@ PrefabInstance:
     - target: {fileID: 7137749481989530896, guid: ad12ecc76d578134eb6b8ce09f932703, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7137749481989530897, guid: ad12ecc76d578134eb6b8ce09f932703, type: 3}
-      propertyPath: nextLevel
-      value: Level2
       objectReference: {fileID: 0}
     - target: {fileID: 7137749481989530902, guid: ad12ecc76d578134eb6b8ce09f932703, type: 3}
       propertyPath: m_Name

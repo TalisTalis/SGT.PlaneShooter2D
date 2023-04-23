@@ -275,13 +275,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 5
   offset: 0.8
-  health: 5
+  health: 8
   explosionPrefab: {fileID: 1730338621821775202, guid: 5f4e9644323075a4aa1bfb891583bbea, type: 3}
   damageEffectPrefab: {fileID: 8551814197698247224, guid: ca726888a9922df4c9919fff1fb53cd6, type: 3}
   playerHealthbar: {fileID: 0}
   cointCount: {fileID: 0}
   controller: {fileID: 0}
   audioSource: {fileID: 1917976196}
+  coinSound: {fileID: 8300000, guid: a87f44074bac247439b37f2c25b9a49a, type: 3}
   damageSound: {fileID: 8300000, guid: 4401c09e1e21b184a8c7abc430ffeece, type: 3}
   explosionSound: {fileID: 8300000, guid: e98e702ba9609904fbaae990042ee9b2, type: 3}
 --- !u!114 &1505500296

@@ -47,7 +47,7 @@ public class EnemyScript : MonoBehaviour
             {
                 AudioSource.PlayClipAtPoint(explosionSound, Camera.main.transform.position, 0.5f);
                 Destroy(gameObject);
-                AudioSource.PlayClipAtPoint(coinSound, Camera.main.transform.position, 0.5f);
+                AudioSource.PlayClipAtPoint(coinSound, Camera.main.transform.position, 0.3f);
                 Instantiate(coinPrefab, transform.position, Quaternion.identity);
                 GameObject explosion = Instantiate(explosionPrefab, transform.position, Quaternion.identity);
                 Destroy(explosion, 0.9f);

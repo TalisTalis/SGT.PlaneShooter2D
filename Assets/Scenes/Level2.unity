@@ -4439,7 +4439,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4740677946257523366, guid: 02e78c542f8978147bbfdbdb37d37f18, type: 3}
       propertyPath: health
-      value: 15
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4740677946257523366, guid: 02e78c542f8978147bbfdbdb37d37f18, type: 3}
       propertyPath: coinSound

@@ -3,6 +3,7 @@ using UnityEngine.SceneManagement;
 
 public class LevelLoader : MonoBehaviour
 {
+    public AudioClip pauseButtonSound;
     int currentIndex;
 
     private void Start()
@@ -12,6 +13,7 @@ public class LevelLoader : MonoBehaviour
     public void Reload()
     {
         Time.timeScale = 1;
+        AudioSource.PlayClipAtPoint(pauseButtonSound, Camera.main.transform.position, 0.5f);
         SceneManager.LoadScene(currentIndex);
     }
 

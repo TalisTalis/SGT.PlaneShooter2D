@@ -40,13 +40,23 @@ public class PlayerScript : MonoBehaviour
     }
     void FixedUpdate()
     {
-        //Debug.Log(Input.GetAxis("Horizontal"));
-        float deltaX = Input.GetAxis("Horizontal") * speed * Time.fixedDeltaTime;
-        float deltaY = Input.GetAxis("Vertical") * speed * Time.fixedDeltaTime;
-        float newXpos = Mathf.Clamp(transform.position.x + deltaX, minX, maxX);
-        float newYpos = Mathf.Clamp(transform.position.y + deltaY, minY, maxY);
-        //float newYpos = transform.position.y + deltaY;
-        transform.position = new Vector2(newXpos, newYpos);
+        if (SystemInfo.deviceType == DeviceType.Handheld)
+        {
+            if (Input.GetMouseButton(0))
+            {
+                Vector2 newPos = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y));
+                newPos = new Vector2(Mathf.Clamp(newPos.x, minX, maxX), Mathf.Clamp(newPos.y, minY, maxY));
+                transform.position = Vector2.Lerp(transform.position, newPos, speed * Time.deltaTime);
+            }
+        }
+        else
+        {
+            float deltaX = Input.GetAxis("Horizontal") * speed * Time.fixedDeltaTime;
+            float deltaY = Input.GetAxis("Vertical") * speed * Time.fixedDeltaTime;
+            float newXpos = Mathf.Clamp(transform.position.x + deltaX, minX, maxX);
+            float newYpos = Mathf.Clamp(transform.position.y + deltaY, minY, maxY);
+            transform.position = new Vector2(newXpos, newYpos);
+        }        
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -73,7 +83,7 @@ public class PlayerScript : MonoBehaviour
 
         if (collision.CompareTag("Coin"))
         {
-            audioSource.PlayOneShot(coinSound, 0.5f);
+            audioSource.PlayOneShot(coinSound, 1f);
             cointCount.AddCount();
             Destroy(collision.gameObject);
         }
