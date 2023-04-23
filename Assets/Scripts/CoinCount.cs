@@ -4,6 +4,7 @@ using UnityEngine;
 public class CoinCount : MonoBehaviour
 {
     public TMP_Text cointCountText;
+    public TMP_Text coinsText;
 
     int count = 0;
 
@@ -14,7 +15,7 @@ public class CoinCount : MonoBehaviour
             count = 9999;
         }
 
-        cointCountText.text = count.ToString();
+        coinsText.text = cointCountText.text = count.ToString();
     }
 
     public void AddCount()

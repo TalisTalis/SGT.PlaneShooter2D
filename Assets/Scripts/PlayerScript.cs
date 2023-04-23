@@ -12,6 +12,7 @@ public class PlayerScript : MonoBehaviour
     public CoinCount cointCount;
     public GameController controller;
     public AudioSource audioSource;
+    public AudioClip coinSound;
     public AudioClip damageSound;
     public AudioClip explosionSound;
 
@@ -52,7 +53,8 @@ public class PlayerScript : MonoBehaviour
     {
         if (collision.CompareTag("EnemyBullet"))
         {
-            audioSource.PlayOneShot(damageSound, 0.5f);
+            AudioSource.PlayClipAtPoint(damageSound, Camera.main.transform.position, 0.5f);
+            //audioSource.PlayOneShot(damageSound, 0.5f);
             Destroy(collision.gameObject);
             DamagePlayerHealthbar();
 
@@ -71,6 +73,7 @@ public class PlayerScript : MonoBehaviour
 
         if (collision.CompareTag("Coin"))
         {
+            audioSource.PlayOneShot(coinSound, 0.5f);
             cointCount.AddCount();
             Destroy(collision.gameObject);
         }

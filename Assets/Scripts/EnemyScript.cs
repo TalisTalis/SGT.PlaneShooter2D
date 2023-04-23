@@ -10,6 +10,11 @@ public class EnemyScript : MonoBehaviour
     public GameObject coinPrefab;
     public Healthbar healthbar;
 
+    public AudioSource audioSource;
+    public AudioClip coinSound;
+    public AudioClip damageSound;
+    public AudioClip explosionSound;
+
     float barSize = 1f;
     float damage = 0f;
 
@@ -31,6 +36,8 @@ public class EnemyScript : MonoBehaviour
     {
         if (other.CompareTag("PlayerBullet"))
         {
+            AudioSource.PlayClipAtPoint(damageSound, Camera.main.transform.position, 0.5f);
+            //audioSource.PlayOneShot(damageSound, 0.5f);
             DamageHealthbar();
             Destroy(other.gameObject);
             GameObject damageEffect = Instantiate(damageEffectPrefab, other.transform.position, Quaternion.identity);
@@ -38,12 +45,14 @@ public class EnemyScript : MonoBehaviour
 
             if (health <= 0)
             {
+                AudioSource.PlayClipAtPoint(explosionSound, Camera.main.transform.position, 0.5f);
                 Destroy(gameObject);
+                AudioSource.PlayClipAtPoint(coinSound, Camera.main.transform.position, 0.5f);
                 Instantiate(coinPrefab, transform.position, Quaternion.identity);
                 GameObject explosion = Instantiate(explosionPrefab, transform.position, Quaternion.identity);
                 Destroy(explosion, 0.9f);
             }
-        }
+        }        
     }
 
     void DamageHealthbar()

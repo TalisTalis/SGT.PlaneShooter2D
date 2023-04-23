@@ -1163,9 +1163,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemies:
   - {fileID: 4424758458278672296, guid: cb541f4e6aef37342ac037af45a155a0, type: 3}
+  - {fileID: 5614981257995622360, guid: c2418e543711bce46b2fe4ab43acf05f, type: 3}
+  - {fileID: 8823227924430555306, guid: 8e3a921af4ce612438ee974682103e9e, type: 3}
   gameController: {fileID: 1756983511}
-  respawnTime: 4
-  enemySpawnCount: 5
+  respawnTime: 3
+  enemySpawnCount: 12
 --- !u!4 &357754854
 Transform:
   m_ObjectHideFlags: 0
@@ -4552,10 +4554,6 @@ PrefabInstance:
     - target: {fileID: 7137749481989530896, guid: ad12ecc76d578134eb6b8ce09f932703, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7137749481989530897, guid: ad12ecc76d578134eb6b8ce09f932703, type: 3}
-      propertyPath: nextLevel
-      value: Level2
       objectReference: {fileID: 0}
     - target: {fileID: 7137749481989530902, guid: ad12ecc76d578134eb6b8ce09f932703, type: 3}
       propertyPath: m_Name
